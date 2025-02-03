@@ -3,6 +3,7 @@ The ChatDB project bridges the gap between natural language and database queryin
 The platform uses NLP techniques to process user inputs and dynamically generate database-specific queries, ensuring flexibility and usability.
 
 Flow Diagram
+
 <img width="644" alt="image" src="https://github.com/user-attachments/assets/d9dd484b-25e8-4b81-95fc-59b26c010d52" />
 
 Description
@@ -31,12 +32,15 @@ NoSQL Results: Displayed as aggregated data or pretty-printed JSON for better re
 Screen Shots:
 
 Uploading Dataset
+
 <img width="632" alt="image" src="https://github.com/user-attachments/assets/b89de7af-b3b1-4ce7-9f48-5e1334788fd5" />
 
 Display Data
+
 <img width="633" alt="image" src="https://github.com/user-attachments/assets/0eab104b-3910-4ec3-987c-686c4704717a" />
 
 Query Execution
+
 <img width="611" alt="image" src="https://github.com/user-attachments/assets/7dc3d60e-0b85-4c03-bf15-a94eb57399c1" />
 
 
