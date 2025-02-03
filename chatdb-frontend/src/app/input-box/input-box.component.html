@@ -1,0 +1,21 @@
+<div class="input-box">
+  <input [(ngModel)]="query" (keyup.enter)="submitQuery('mysql')" placeholder="Type your query..." />
+  <!-- <button (click)="fetchMySQLMetadata()">MySQL Metadata</button>
+  <button (click)="fetchMongoDBMetadata()">MongoDB Metadata</button> -->
+  <button (click)="submitQuery('mysql')"> MySQL </button>
+  <button (click)="submitQuery('mongodb')"> MongoDB </button>
+
+  <div class="attachment-menu">
+    <button class="attachment-button" (click)="toggleDropdown()"> 📎 Upload Dataset </button>
+    <div class="dropdown" *ngIf="showDropdown">
+      <label>
+        <input type="file" (change)="handleFileUpload($event, 'sql')" accept=".csv" hidden />
+        CSV (SQL)
+      </label>
+      <label>
+        <input type="file" (change)="handleFileUpload($event, 'mongodb')" accept=".json" hidden />
+        JSON (MongoDB)
+      </label>
+    </div>
+  </div>
+</div>

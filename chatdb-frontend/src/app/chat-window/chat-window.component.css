@@ -1,0 +1,25 @@
+
+:host {
+  display: block;
+  width: 100%;
+  height: 75vh; /* Occupies 75% of the viewport height */
+  overflow-y: auto; /* Adds a vertical scrollbar if content overflows */
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  padding: 10px;
+  background-color: #f9f9f9;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+.chat-window {
+    width: 100%;
+    height: 100%; /* Matches the parent container size */
+    overflow-y: auto; /* Enables vertical scrolling */
+    overflow-x: hidden; /* Prevents horizontal scrolling */
+    padding: 10px;
+    box-sizing: border-box;
+    flex-grow: 1;
+    /* padding: 1rem; */
+    /* overflow-y: auto; */
+    background-color: #f6f6f6;
+  }
+  

@@ -1,0 +1,17 @@
+<div class="chat-window" #chatContainer>
+  <app-chat-message 
+    *ngFor="let message of messages$ | async" 
+    [message]="message">
+  </app-chat-message>
+  <app-loading-spinner *ngIf="(isLoading$ | async)"></app-loading-spinner>
+</div>
+
+
+<!-- <div class="chat-window">
+    <app-chat-message 
+      *ngFor="let message of messages | async" 
+      [message]="message">
+    </app-chat-message>
+    <app-loading-spinner *ngIf="(isLoading | async)"></app-loading-spinner>
+  </div>
+   -->

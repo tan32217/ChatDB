@@ -1,0 +1,45 @@
+<div *ngIf="message.sender === 'user'" class="user-message">
+  {{ message.content }}
+</div>
+
+<div *ngIf="message.sender === 'db'">
+  <!-- Render the output as a table if it's query results -->
+  <div *ngIf="isTableData(); else defaultView">
+    <table>
+      <thead>
+        <tr>
+          <th *ngFor="let header of getTableHeaders()">{{ header }}</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let row of getParsedContent()">
+          <td *ngFor="let header of getTableHeaders()">
+            {{ row[header] }}
+          </td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+
+  <ng-template #mongoView>
+    <div class="mongo-documents" *ngIf="isMongoData(); else defaultView">
+      <div *ngFor="let doc of getParsedContent()" class="mongo-document">
+        <div *ngFor="let key of getObjectKeys(doc)" class="document-line">
+          <span class="document-key">{{ key }}:</span>
+          <span class="document-value">{{ doc[key] }}</span>
+        </div>
+      </div>
+    </div>
+  </ng-template>
+  
+  <ng-template #defaultView>
+    <div class="message-content">
+      {{ message.content }}
+    </div>
+  </ng-template>
+</div>
+
+<!-- <div [ngClass]="{'user-message': message.sender === 'user', 'db-message': message.sender === 'db'}">
+    {{ message.content }}
+  </div>
+   -->

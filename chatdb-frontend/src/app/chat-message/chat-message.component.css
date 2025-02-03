@@ -1,0 +1,71 @@
+.user-message {
+    text-align: right;
+    margin-bottom: 1rem;
+    background-color: #d4e6ff;
+    padding: 0.5rem;
+    border-radius: 8px;
+  }
+  
+  .db-message {
+    text-align: left;
+    margin-bottom: 1rem;
+    background-color: #f1f0f0;
+    padding: 0.5rem;
+    border-radius: 8px;
+  }
+
+
+  table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 10px 0;
+    display: block;
+    overflow-x: auto;
+  }
+  
+  thead th {
+    background-color: #f4f4f4;
+    border: 1px solid #ddd;
+    padding: 8px;
+  }
+  
+  tbody td {
+    border: 1px solid #ddd;
+    padding: 8px;
+    text-align: left;
+  }
+  
+  tbody tr:nth-child(even) {
+    background-color: #f9f9f9;
+  }
+
+  .mongo-documents {
+    display: flex;
+    flex-direction: column;
+    gap: 15px; /* Space between documents */
+  }
+  
+  .mongo-document {
+    background-color: #f9f9f9;
+    border: 1px solid #ddd;
+    padding: 10px;
+    border-radius: 5px;
+    font-family: 'Courier New', Courier, monospace;
+    font-size: 14px;
+    white-space: pre-wrap; /* Ensure line breaks */
+    word-break: break-word; /* Break long words if necessary */
+  }
+  
+  .document-line {
+    margin-bottom: 5px; /* Space between key-value pairs */
+  }
+  
+  .document-key {
+    font-weight: bold;
+    color: #333;
+    margin-right: 10px;
+  }
+  
+  .document-value {
+    color: #555;
+  }

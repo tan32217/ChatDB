@@ -1,0 +1,43 @@
+.app-header {
+    background-color: #333;
+    color: white;
+    text-align: center;
+    padding: 1rem;
+    font-size: 1.5rem;
+  }
+  
+  /* .chat-container {
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+    max-width: 600px;
+    margin: auto;
+  } */
+
+  .chat-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: stretch;
+    height: 75vh; /* Ensure it takes up 75% of the viewport */
+    margin: 0 auto; /* Center horizontally */
+    width: 200%; /* Adjust this for your preferred width */
+    max-width: 1200px; /* Add a max-width to prevent it from being too large on wide screens */
+    padding: 10px;
+    background-color: #ffffff;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+    overflow: hidden;
+  }
+
+  @media screen and (max-width: 768px) {
+    .chat-container {
+      width: 95%; /* Use more of the screen on smaller devices */
+      height: 85vh; /* Adjust height for smaller screens */
+    }
+  
+    :host {
+      height: 70vh; /* Make chat window a bit shorter */
+    }
+  }
+  
